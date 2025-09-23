@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam Vibhaag</title>
+    <link rel="stylesheet" href="index.css">
+
+  
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1 id="heading"><a href="weather.html">Mausam Vibhaag</a></h1>
+            <div class="search"> <input type="text" id="input" placeholder="Search Any City">
+                <button type="button" id="button">Search</button>
+            </div>
+        </div>
+        <div class="weatherbox">
+           <div class="city">Weather In Delhi</div>
+           <div class="temp">23°C</div>
+            <img src="" alt="" class="icon" />
+            <div class="description">Cloudy</div>
+            <div class="windspeed">Wind Speed : 6.2km/h</div>
+            <div class="humidity">Humidity : 60%</div>
+        </div>
+        <div class="about"><h3><a href="aboutweather.html">About  The Website</a></h3></div>
+    </div>
+</body>
+<script>
+    let weather = {
+        "apiKey": "815057fa20136f41a307cd635855a34b",   
+        fetchWeather: function (city) {
+            fetch("https://api.openweathermap.org/data/2.5/weather?q="
+                + city
+                + "&units=metric&appid="
+                + this.apiKey
+            ).then((response) => response.json()).then((data) => this.displayWeather(data));
+        },
+        displayWeather: function (data) {
+        const {name} = data;
+        const {icon,description} = data.weather[0];
+        const {temp,humidity} = data.main;
+        const {speed} = data.wind;
+        document.querySelector(".city").innerText= "Weather in " + name;
+        document.querySelector(".icon").src =  "https://openweathermap.org/img/wn/" + icon +".png" ;
+        document.querySelector(".description").innerText = description;
+        document.querySelector(".windspeed").innerText ="Wind Speed : " + speed + "Km/h";
+        document.querySelector(".humidity").innerText = "Humidity : " + humidity + "%";
+        document.querySelector(".temp").innerText = temp + "°C";
+        } ,
+      find : function() {
+      this.fetchWeather(document.getElementById("input").value); 
+}
+    }
+    
+    let buttonn = document.getElementById("button");
+    buttonn.addEventListener("click", function(){
+        weather.find();
+    });
+ 
+
+
+    
+</script>
+</html>

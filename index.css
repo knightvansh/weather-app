@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+html{
+    background-image: url("https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60");
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+}
+
+#heading{
+    font-family: 'Supermercado One', cursive;
+    color:   rgba(111 23 23 / 86%);
+    text-shadow: 1px 1px  black;
+}
+
+.search{
+  margin-left: 303px;
+  padding-top: 33px;  
+}
+#button{
+    height: 32px;
+    width: 100px;
+    border-radius: 30px;
+    background-color: rgb(122, 175, 255);
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+#input{
+    height: 27px;
+    width: 172px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+
+.weatherbox{
+    background-color: rgba(26, 185, 248, 0.582);
+    border-radius: 30px;
+    width: 828px;
+    height: 200px;
+    margin-left: 200px;
+    
+    
+}
+
+.city{
+    margin-top: 150px;
+    margin-left: 320px;
+    padding-top: 15px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+    font-size: 1.8rem;
+}
+
+.windspeed{
+    margin-left: 360px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+}
+.humidity{
+    margin-left: 380px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+}
+
+.temp{
+    margin-left: 403px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+    font-size: 1.2rem;
+}
+.icon{
+    margin-left: 403px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+}
+.description{
+    margin-left: 403px;
+    color: rgb(255, 255, 255);  
+    font-family: cursive;
+}
+
+.about{
+    font-family: cursive;
+    margin-inline-start: 1018px;
+    margin-block-start: 8em;
+}
+a{
+    text-decoration: none !important;
+    color: aqua;
+}
+a:hover{
+   color : rgba(252, 190, 190, 0.86);
+}
+
+.containerr{
+    display: flex;
+    background-color: rgba(26, 185, 248, 0.582);
+    text-align: center;
+    margin-top: 15em;
+    height: 5em;
+
+}
